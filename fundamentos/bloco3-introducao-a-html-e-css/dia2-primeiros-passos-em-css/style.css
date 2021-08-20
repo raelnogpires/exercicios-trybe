@@ -1,0 +1,43 @@
+#heading1 {
+    color: blue;
+}
+
+ul {
+    color: rgb(19, 6, 1);
+}
+
+.two {
+    background-color: lightblue;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+}
+
+p {
+  font-weight: 600;
+  font-size: 3em;
+}
+
+.linha-cortando {
+  text-decoration: underline;
+}
+
+
+body {
+  font-size: 16px;
+  text-align: center;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#red {
+  background-color: red;
+}
+
+#brown {
+  background-color: brown;
+}
