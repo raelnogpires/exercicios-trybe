@@ -13,10 +13,11 @@
   }
   
   .baloon {
-    width: 100px;
+    width: 180px;
     position: absolute;
     z-index: 3;
-    left: 200px;
+    left: 250px;
+    top: 240px;
   }
   
   .speach {
@@ -30,6 +31,6 @@
     width: 200px;
     position: absolute;
     z-index: 4;
-    left: 350px;
-    bottom: 100px;
+    left: 370px;
+    bottom: 150px;
   }
