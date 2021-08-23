@@ -8,6 +8,8 @@ h1 {
     height: 50px;
     text-align: center;
     width: 200px;
+    display: block;
+    margin: auto;
 }
 
 .second {
@@ -16,6 +18,7 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
+    display: inline-block;
 }
 
 .third {
@@ -24,18 +27,11 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
-}
-
-.prizesAlignement {
-    text-align: center;
-}
-
-.prizesSentence {
     display: inline-block;
 }
 
-.podium {
-    text-align: center;
+/*.prizesSentence {
+    display: inline-block;
 }
 
 .botPodium {
@@ -46,4 +42,17 @@ h1 {
 .upPodium {
     display: inline-block;
     margin: auto;
+}*/
+
+.podium {
+    text-align: center;
+}
+
+li.prizesSentence {
+    display: inline-block;
+    text-align: center;
+}
+
+.prizesAlignement {
+    text-align: center;
 }
