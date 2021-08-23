@@ -34,3 +34,16 @@ h1 {
     display: inline-block;
 }
 
+.podium {
+    text-align: center;
+}
+
+.botPodium {
+    display: inline-block;
+    margin: auto;
+}
+
+.upPodium {
+    display: inline-block;
+    margin: auto;
+}
