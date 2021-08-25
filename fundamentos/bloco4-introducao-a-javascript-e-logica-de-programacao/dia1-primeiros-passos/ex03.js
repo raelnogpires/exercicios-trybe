@@ -1,0 +1,1 @@
+const currentHour = 17;
