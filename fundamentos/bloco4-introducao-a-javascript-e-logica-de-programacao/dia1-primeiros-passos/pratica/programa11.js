@@ -24,7 +24,7 @@ if (salarioBase <= 1903.98) { // Imposto de Renda - IR
     descontoIr = (salarioBase / 100) * 15 - 354.80;
 } else if (salarioBase >= 3751.06 && salarioBase <= 4.664,68) {
     descontoIr = (salarioBase / 100) * 22.5 - 636.13;
-} else { //if (salarioBruto > 4.664,68) {
+} else {
     descontoIr = (salarioBase / 100) * 27.5 - 869.36;
 }
 
