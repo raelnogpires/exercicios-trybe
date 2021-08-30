@@ -9,7 +9,7 @@ function biggerNumber(whole) {
 		maxValue = Math.max(maxValue, number);
 	}
 
-	console.log(maxValue);
+	console.log("The bigger value is " + maxValue);
 }
 
 biggerNumber(numbers);
