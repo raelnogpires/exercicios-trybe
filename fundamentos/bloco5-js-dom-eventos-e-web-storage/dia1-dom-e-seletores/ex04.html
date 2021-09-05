@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+      function modifyParagraphText(tag) {
+        document.getElementsByTagName(tag)[0].innerText = 'Daqui a 2 anos me vejo realizando todas as minhas metas de médio prazo.'
+      }
+
+      modifyParagraphText('p');
+
+      function changeYellowSquareColor(className) {
+        document.getElementsByClassName(className)[0].style.backgroundColor = 'rgb(76,164,109)';
+      }
+
+      changeYellowSquareColor('main-content');
+
+      function changeRedSquare(className) {
+        document.getElementsByClassName(className)[0].style.backgroundColor = 'white';
+      }
+
+      changeRedSquare('center-content');
+
+      function correctH1Text(tag) {
+        document.getElementsByTagName(tag)[0].innerText = 'Exercício 5.1 - JavaScript';
+      }
+
+      correctH1Text('h1');
+
+      function turnParagraphUpperCase(tag) {
+        let paragraphArray = document.getElementsByTagName(tag);
+
+        for(let index = 0; index < paragraphArray.length; index += 1) {
+          paragraphArray[index] = document.getElementsByTagName(tag)[index].style.textTransform = 'uppercase';
+        }
+      }
+
+      turnParagraphUpperCase('p');
+
+      function printParagraphInConsole(tag) {
+        let paragraphs = document.getElementsByTagName(tag);
+
+        for (let index = 0; index < paragraphs.length; index += 1) {
+          console.log(paragraphs[index]);
+        }
+      }
+
+      printParagraphInConsole('p');
+
+    </script>
+  </body>
+</html>
