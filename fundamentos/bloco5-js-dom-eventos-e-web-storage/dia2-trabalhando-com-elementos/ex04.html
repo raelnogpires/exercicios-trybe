@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function createElementeAndAppend(tag, htmlElement ,string) {
+      let element = document.getElementsByTagName(tag)[0];
+
+      let firstElement = document.createElement(htmlElement);
+
+      firstElement.innerText = string;
+
+      element.appendChild(firstElement);
+    }
+
+    createElementeAndAppend('body', 'h1', 'Exercício 5.2 - JavaScript DOM');
+
+    createElementeAndAppend('body', 'main', '');
+
+    let main = document.getElementsByTagName('main')[0];
+    main.className = 'main-content';
+    //document.getElementsByTagName('main')[0].className = 'main-content';
+
+    createElementeAndAppend('main', 'section', '');
+
+    document.getElementsByTagName('section')[0].className = 'center-content';
+
+    createElementeAndAppend('section', 'p', 'Father, hold me close. Dont let me drown.');
+
+    createElementeAndAppend('main', 'section', '');
+
+    let leftContent = document.getElementsByTagName('section')[1];
+    leftContent.className = 'left-content';
+    //document.getElementsByTagName('section')[1].className = 'left-content';
+
+    createElementeAndAppend('main', 'section', '');
+
+    document.getElementsByTagName('section')[2].className = 'right-content';
+
+    let sectionLeftContentImage = document.createElement('img');
+    sectionLeftContentImage.src = 'https://picsum.photos/200';
+    document.querySelector('.left-content').appendChild(sectionLeftContentImage);
+
+    document.getElementsByTagName('img')[0].className = 'small-image';
+
+    let extenseList = document.createElement('ul');
+    document.querySelector('.right-content').appendChild(extenseList);
+    let numbersList = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    let extenseNumberList = document.getElementsByTagName('ul')[0];
+    for (let index = 0; index < numbersList.length; index += 1) {
+      let number = numbersList[index];
+
+      let numberListItem = document.createElement('li');
+      numberListItem.innerText = number
+      numberListItem.className = 'numbers-list';
+
+      extenseNumberList.appendChild(numberListItem);
+    }
+
+    createElementeAndAppend('main', 'h3', '');
+    createElementeAndAppend('main', 'h3', '');
+    createElementeAndAppend('main', 'h3', '');
+
+    document.getElementsByTagName('h1')[0].className = 'title';
+
+    document.getElementsByTagName('h3')[0].className = 'description';
+    document.getElementsByTagName('h3')[1].className = 'description';
+    document.getElementsByTagName('h3')[2].className = 'description';
+
+    main.removeChild(document.querySelector('.left-content'));
+
+    let rightContent = document.querySelector('.right-content');
+    rightContent.style.marginRight = 'auto';
+
+    document.querySelector('.center-content').style.backgroundColor = 'green';
+
+    let ulNumbersList = document.querySelectorAll('.numbers-list');
+    for (let index = 0; index < ulNumbersList.length; index += 1) {
+      let element = ulNumbersList[index];
+
+      if (element.innerText.includes('Nove')) {
+        extenseList.removeChild(element);
+      }
+
+      if (element.innerText.includes('Dez')) {
+        extenseList.removeChild(element);
+      }
+    }
+    </script>
+  </body>
+</html>
