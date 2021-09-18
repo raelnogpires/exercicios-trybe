@@ -158,7 +158,7 @@ function validateInput(inputName){
 }
   
 function renderErrorMessages(messages){
-  let form = document.querySelector('#cv-form');
+  let form = document.querySelector('form');
   let messageDiv = document.createElement('div');
   messageDiv.className = 'error';
   form.prepend(messageDiv);
@@ -208,7 +208,7 @@ function renderData(){
   let dataDiv = document.createElement('div');
   dataDiv.className = 'data';
 
-  let form = document.querySelector('#cv-form');
+  let form = document.querySelector('form');
   form.prepend(dataDiv);
 
   for(let name in inputs){
