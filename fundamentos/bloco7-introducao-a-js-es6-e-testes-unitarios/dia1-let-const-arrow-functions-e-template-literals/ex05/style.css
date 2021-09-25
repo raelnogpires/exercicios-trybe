@@ -1,0 +1,17 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+}
+
+.count-button {
+  display: flex;
+  justify-content: center;
+}
+
+.count-refresher {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
