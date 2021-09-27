@@ -33,15 +33,20 @@ const order = {
       total: 60,
     },
   };
-  
+
   const customerInfo = (order) => {
-    
+    const orderMessage = `Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, R. ${order.address.street}, Nº: ${order.address.number}, Apto: ${order.address.apartment}.`;
+    console.log(orderMessage);
   }
-  
+
   customerInfo(order);
-  
+
+  order.name = 'Luiz Silva';
+  order.order.payment = 50;
+
   const orderModifier = (order) => {
-    
+    const totalMessage = `Olá ${order.name}, o total do seu pedido de ${Object.keys(order.order.pizza)[0]}, ${Object.keys(order.order.pizza)[1]} e ${order.order.drinks.coke.type} é R$${order.order.payment},00.`;
+    console.log(totalMessage);
   }
-  
+
   orderModifier(order);
