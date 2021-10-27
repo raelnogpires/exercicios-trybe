@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+}
+
+* {
+  color: #282828;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  background-image: url('https://i.pinimg.com/originals/85/4d/cd/854dcd215dbeb47334fdd8024a051954.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.header {
+  background-color: whitesmoke;
+  border: 1px solid #282828;
+  border-radius: 15px;
+  margin: 15px auto 40px;
+  text-align: center;
+  width: 500px;
+}
+
+.header h1 {
+  margin-bottom: 0;
+}
+
+.header p {
+  margin-bottom: 25px;
+}
+
+.pokemon-div {
+  align-items: center;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin: 30px auto 30px;
+  text-align: center;
+  width: 500px;
+}
+
+.text-info {
+  margin-right: 20px;
+}
+
+.poke-img {
+  margin-left: 20px;
+}
