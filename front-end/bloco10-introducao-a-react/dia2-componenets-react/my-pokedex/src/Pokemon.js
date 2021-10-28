@@ -24,6 +24,6 @@ Pokemon.propTypes = {
   value: PropTypes.number.isRequired,
   measurementUnit: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
-};
+}
 
 export default Pokemon;
