@@ -1,9 +1,13 @@
 import './App.css'
 import Buttons from './Buttons';
+import CountButtons from './CountButtons';
 
 function App() {
   return (
-    <Buttons />
+    <>
+      <Buttons />
+      <CountButtons />
+    </>
   );
 }
 

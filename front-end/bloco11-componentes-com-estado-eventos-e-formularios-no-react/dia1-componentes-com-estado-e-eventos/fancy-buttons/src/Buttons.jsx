@@ -12,11 +12,11 @@ class Buttons extends Component {
   handleFirstButton = () => {
     console.log('Funcionou! XD');
   };
-  
+
   handleSecondButton = () => {
     console.log('Esse aqui também está funcionando :O');
   };
-  
+
   handleThirdButton = () => {
     console.log('O último funcionou também, ufa! :P');
   };
