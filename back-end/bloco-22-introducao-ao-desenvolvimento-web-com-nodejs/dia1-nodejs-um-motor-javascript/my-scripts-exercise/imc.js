@@ -1,10 +1,14 @@
 const imcCalc = (weight, height) => {
-  const imc = (weight / (Math.pow(height / 100, 2))).toFixed(2);
-  console.log(`Peso: ${weight}, altura: ${height}`);
+  const imc = (weight / (Math.pow(height, 2))).toFixed(2);
+  console.log(`Peso: ${weight}, altura: ${height.toFixed(2)}`);
   console.log(`Seu IMC é: ${imc}`);
 };
 
 const w = 70;
-const h = 170;
+const h = 1.70;
 
-imcCalc(w, h);
+module.exports = {
+  imcCalc,
+  w,
+  h
+};
