@@ -1,3 +1,3 @@
-const { imcCalc, h, w } = require('./imc');
+// const { returnUserIMC } = require('./imc');
 
-imcCalc(w, h);
+// returnUserIMC();
