@@ -1,0 +1,11 @@
+{
+  "name": "dia2-nodejs-fluxo-assincrono",
+  "version": "1.0.0",
+  "description": "Package with all exercises from day 2 of Nodejs block @ Trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rael N. Pires",
+  "license": "ISC"
+}
