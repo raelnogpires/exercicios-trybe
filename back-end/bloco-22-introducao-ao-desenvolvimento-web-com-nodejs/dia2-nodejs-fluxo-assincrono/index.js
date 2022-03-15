@@ -13,9 +13,22 @@ const main = (n1, n2, n3) => {
 };
 
 const n = () => {
-  return Math.floor(Math.random() * 10 + 1)
+  return Math.floor(Math.random() * 100 + 1)
 };
 
-main(n(), n(), n())
-  .then((result) => console.log(`Cálculo final: ${result}`))
-  .catch(({ message }) => console.log(`Erro: ${message}`));
+// Executa a função utilizando .then e .catch
+// main(n(), n(), n())
+//   .then((result) => console.log(`Cálculo final: ${result}`))
+//   .catch(({ message }) => console.log(`Erro: ${message}`));
+
+// Executa a função utilizando async/await
+const run = async () => {
+  try {
+    const result = await main(n(), n(), n());
+    console.log(`Cálculo final: ${result}`);
+  } catch(err) {
+    console.log(`Erro: ${err.message}`)
+  };
+};
+
+run();
