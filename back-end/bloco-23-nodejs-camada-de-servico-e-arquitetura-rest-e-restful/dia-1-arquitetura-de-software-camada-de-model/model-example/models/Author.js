@@ -23,6 +23,23 @@ const getAll = async () => {
   return authors.map(camelCase).map(fullName);
 };
 
+const findById = async (id) => {
+  const query = 'SELECT first_name, middle_name, last_name FROM model_example.authors WHERE id = ?'
+  const [author] = await connection.execute(query, [id]);
+
+  if (author.length === 0) return null;
+
+  const { firstName, middleName, lastName } = author.map(camelCase)[0];
+
+  return fullName({
+    id,
+    firstName,
+    middleName,
+    lastName,
+  });
+};
+
 module.exports = {
   getAll,
+  findById,
 };

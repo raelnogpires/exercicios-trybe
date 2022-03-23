@@ -13,6 +13,18 @@ app.get('/authors', async (_req, res) => {
   res.status(HTTP_OK).json(authors);
 });
 
+app.get('/authors/:id', async (req, res) => {
+  const { id } = req.params;
+
+  const author = await Author.findById(id);
+
+  if (!author) {
+    return res.status(404).json({ message: 'Not found :(' });
+  }
+
+  res.status(200).json(author);
+});
+
 app.get('/books', async (_req,res) => {
   const books = await Book.getAll();
 
@@ -22,7 +34,7 @@ app.get('/books', async (_req,res) => {
 app.get('/books/:id', async (req, res) => {
   const { id } = req.params;
 
-  const books = await Book.getBookById(id);
+  const books = await Book.getAuthorById(id);
 
   if (!books) {
     return res.status(404).json({ message: 'Not found :(' });
