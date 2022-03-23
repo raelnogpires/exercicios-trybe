@@ -3,7 +3,7 @@ const Author = require('./models/Author');
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 app.get('/authors', async (_req, res) => {
   const authors = await Author.getAll();
