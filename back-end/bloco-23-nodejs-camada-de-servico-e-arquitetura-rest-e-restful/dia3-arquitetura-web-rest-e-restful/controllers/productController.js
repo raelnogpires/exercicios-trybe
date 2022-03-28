@@ -58,7 +58,8 @@ const getProductById = async (req, res) => {
 
 const addNewProduct = async (req, res) => {
   try {
-    const newProduct = await ProductModel.add(req.body);
+    const { name, brand } = req.body;
+    const newProduct = await ProductModel.add(name, brand);
     res.status(CREATED_STATUS).json(newProduct);
   } catch (error) {
     console.log(error);
@@ -102,7 +103,8 @@ const deleteById = async (req, res) => {
 const update = async (req, res) => {
   try {
     const { id } = req.params;
-    const products = await ProductModel.update(id, ...req.body);
+    const { name, brand } = req.body;
+    const products = await ProductModel.update(id, name, brand);
     res.status(200).json(products);
   } catch (error) {
     console.log(error);
