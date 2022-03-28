@@ -46,7 +46,7 @@ const getProductById = async (req, res) => {
   }
 };
 
-// router.post('/user', async (req, res) => {
+// router.post('/products', async (req, res) => {
 //   try {
 //     const newProduct = await ProductModel.add(req.body);
 //     res.status(CREATED_STATUS).json(newProduct);
@@ -66,7 +66,7 @@ const addNewProduct = async (req, res) => {
   }
 };
 
-// router.delete('/user/:id', async (req, res) => {
+// router.delete('/products/:id', async (req, res) => {
 //   try {
 //     const { id } = req.params;
 //     await ProductModel.exclude(id);
@@ -88,7 +88,7 @@ const deleteById = async (req, res) => {
   }
 };
 
-// router.put('/user/:id', async (req, res) => {
+// router.put('/products/:id', async (req, res) => {
 //   try {
 //     const { id } = req.params;
 //     const products = await ProductModel.update(id, ...req.body);
