@@ -3,19 +3,26 @@ const ProductModel = require('../models/productModel');
 
 const router = express.Router();
 
-router.get('/list-products', async (req, res, next) => {
-  const products = await ProductModel.getAll();
+const HTTP_OK_STATUS = 200;
+const INTERNAL_ERROR = 500;
 
-  res.send(products);
+router.get('/products', async (_req, res) => {
+  try {
+    const products = await ProductModel.getAll();
+    res.status(HTTP_OK_STATUS).json(products);
+  } catch (error) {
+    console.log(error);
+    res.status(INTERNAL_ERROR).json({ message: 'Ops, alguma coisa deu errado! :(' });
+  }
 });
 
-router.get('/get-by-id/:id', async (req, res, next) => {
+router.get('/products/:id', async (req, res, next) => {
   const product = await ProductModel.getById(req.params.id);
 
   res.send(product);
 });
 
-router.post('/add-user', async (req, res) => {
+router.post('/user', async (req, res) => {
   const { name, brand } = req.body;
 
   const newProduct = await ProductModel.add(name, brand);
@@ -23,13 +30,13 @@ router.post('/add-user', async (req, res) => {
   res.send(newProduct);
 });
 
-router.post('/delete-user/:id', async (req, res) => {
+router.delete('/user/:id', async (req, res) => {
   const products = await ProductModel.exclude(req.params.id);
 
   res.send(products);
 });
 
-router.post('/update-user/:id', async (req, res) => {
+router.put('/user/:id', async (req, res) => {
   const { name, brand } = req.body;
 
   const products = await ProductModel.update(req.params.id, name, brand);
