@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var f = require("./functions");
+console.log(f.greeter('João'));
+console.log(f.personAge('Rael', 21, false));
+console.log(f.personAge('Lara', 21, true));
+console.log("A soma do array \u00E9 igual a: ".concat(f.sumArray([10, 4, 3, 7])));
+console.log("Tri\u00E2ngulo de base 10cm e e altura 17cm: ".concat(f.triangle(10, 17), "cm\u00B2"));
+console.log("Tri\u00E2ngulo de base 8cm e e altura 13cm: ".concat(f.triangle(8, 13), "cm\u00B2"));
+console.log("Quadrado de lado 8cm: ".concat(f.square(8), "cm\u00B2"));
+console.log("Quadrado de lado 13cm: ".concat(f.square(13), "cm\u00B2"));
+console.log("Ret\u00E2ngulo de base 10cm e altura 45cm: ".concat(f.rectangle(10, 45), "cm\u00B2"));
+console.log("Ret\u00E2ngulo de base 97cm e altura 205cm: ".concat(f.rectangle(100, 200), "cm\u00B2"));
